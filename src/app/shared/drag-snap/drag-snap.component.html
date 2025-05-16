@@ -1,0 +1,18 @@
+<h1>Keep the cdkDrag only on allowed positions!</h1>
+<div class="example-boundary" #boundary>
+  <div
+    class="example-box"
+    cdkDragBoundary=".example-boundary"
+    cdkDrag
+    (cdkDragEnded)="dragEnded($event)"
+    [cdkDragFreeDragPosition]="finalPosition()"
+    #dragElement
+  >
+    <img
+      src="https://raw.githubusercontent.com/angular/angular/main/adev/src/assets/images/press-kit/angular_icon_gradient.gif"
+      alt="Angular Logo"
+      height="40"
+      width="40"
+    />
+  </div>
+</div>
