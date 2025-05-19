@@ -1,4 +1,6 @@
-# CdkDragSnapToPoint
+# Angular CDkDrag Demo - Stick cdkDrag only to allowed points
+
+https://github.com/user-attachments/assets/3a7c39f4-6408-4e74-8a37-7c80bef5c5c4
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
 
