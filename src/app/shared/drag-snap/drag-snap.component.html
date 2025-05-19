@@ -1,12 +1,21 @@
-<h1>Keep the cdkDrag only on allowed positions!</h1>
+<!-- Corner control buttons for testing -->
+<div class="corner-controls">
+  <button mat-flat-button (click)="setCorner('TOP_LEFT')">Top Left</button>
+  <button mat-flat-button (click)="setCorner('TOP_RIGHT')">Top Right</button>
+  <button mat-flat-button (click)="setCorner('BOTTOM_LEFT')">Bottom Left</button>
+  <button mat-flat-button (click)="setCorner('BOTTOM_RIGHT')">Bottom Right</button>
+  <span>Current: {{currentCorner()}}</span>
+</div>
+
 <div class="example-boundary" #boundary>
   <div
     class="example-box"
     cdkDragBoundary=".example-boundary"
     cdkDrag
     (cdkDragEnded)="dragEnded($event)"
-    [cdkDragFreeDragPosition]="finalPosition()"
+    [cdkDragFreeDragPosition]="userDragPosition()"
     #dragElement
+    data-drag="true"
   >
     <img
       src="https://raw.githubusercontent.com/angular/angular/main/adev/src/assets/images/press-kit/angular_icon_gradient.gif"

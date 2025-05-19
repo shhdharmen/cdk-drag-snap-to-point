@@ -46,13 +46,37 @@ ng test
 
 ## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+For end-to-end testing with Playwright, we have two test scripts:
+
+### Basic Drag Tests
+To run the basic drag tests:
 
 ```bash
-ng e2e
+npm run test:e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Comprehensive Corner Tests
+To run tests for all drag scenarios from all corners:
+
+```bash
+npm run test:corners
+```
+
+**Note:** Make sure the development server is running at `http://localhost:4200` before executing these tests.
+
+## Test Coverage
+
+The comprehensive corner tests verify drag behavior from all four corners (TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT) in all eight directions:
+- RIGHT
+- DOWN
+- LEFT
+- UP
+- DOWN_RIGHT
+- DOWN_LEFT
+- UP_RIGHT
+- UP_LEFT
+
+This ensures the drag-snap component correctly predicts and snaps to the final position in all possible scenarios.
 
 ## Additional Resources
 

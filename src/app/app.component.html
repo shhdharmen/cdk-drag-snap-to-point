@@ -1,1 +1,21 @@
-<app-drag-snap />
+<div class="container">
+  <h1>Keep the cdkDrag only on allowed positions!</h1>
+  <div class="fields">
+    <mat-checkbox [(ngModel)]="predictFinalPosition"
+      >Predict Final Position</mat-checkbox
+    >
+    <mat-form-field appearance="outline" subscriptSizing="dynamic">
+      <mat-label>Distance For Prediction</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="distanceForPrediction"
+        [disabled]="!predictFinalPosition()"
+      />
+    </mat-form-field>
+  </div>
+  <app-drag-snap
+    [predictFinalPosition]="predictFinalPosition()"
+    [distanceForPrediction]="distanceForPrediction()"
+  />
+</div>

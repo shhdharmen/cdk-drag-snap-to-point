@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:e2e": "node playwright-test.js",
+    "test:corners": "node playwright-corner-tests.js",
+    "postinstall": "playwright install"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +37,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "playwright": "^1.52.0",
     "typescript": "~5.7.2"
   }
 }
